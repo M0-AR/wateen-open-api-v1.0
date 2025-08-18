@@ -1,0 +1,54 @@
+// File generated from our OpenAPI spec by Stainless. See CONTRIBUTING.md for details.
+
+import { Metadata, asTextContentResult } from 'wateen-open-api-v1.0-mcp/tools/types';
+
+import { Tool } from '@modelcontextprotocol/sdk/types.js';
+import WateenOpenAPIV1_0 from 'wateen-open-api-v1.0';
+
+export const metadata: Metadata = {
+  resource: 'v1.prep_item',
+  operation: 'read',
+  tags: [],
+  httpMethod: 'get',
+  httpPath: '/api/v1/PrepItem/PrepCurrentStock',
+};
+
+export const tool: Tool = {
+  name: 'get_current_stock_v1_prep_item',
+  description: '',
+  inputSchema: {
+    type: 'object',
+    properties: {
+      ItemId: {
+        type: 'string',
+      },
+      organizationId: {
+        type: 'string',
+      },
+      PageNumber: {
+        type: 'integer',
+      },
+      PageSize: {
+        type: 'integer',
+      },
+      BrandName: {
+        type: 'string',
+      },
+      LocationName: {
+        type: 'string',
+      },
+    },
+    required: ['ItemId', 'organizationId', 'PageNumber', 'PageSize'],
+  },
+  annotations: {
+    readOnlyHint: true,
+  },
+};
+
+export const handler = async (client: WateenOpenAPIV1_0, args: Record<string, unknown> | undefined) => {
+  const body = args as any;
+  const response = await client.v1.prepItem.getCurrentStock(body).asResponse();
+  return asTextContentResult(await response.text());
+};
+
+export default { metadata, tool, handler };
