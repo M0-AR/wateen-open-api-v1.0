@@ -4,31 +4,16 @@ It is generated with [Stainless](https://www.stainless.com/).
 
 ## Installation
 
-### Building
+### Direct invocation
 
-Because it's not published yet, clone the repo and build it:
-
-```sh
-git clone git@github.com:stainless-sdks/wateen-open-api-v1.0-typescript.git
-cd wateen-open-api-v1.0-typescript
-./scripts/bootstrap
-./scripts/build
-```
-
-### Running
+You can run the MCP Server directly via `npx`:
 
 ```sh
-# set env vars as needed
 export WATEEN_OPENAPI_V1_0_API_KEY="My API Key"
-node ./packages/mcp-server/dist/index.js
+npx -y wateen-open-api-v1.0-mcp@latest
 ```
-
-> [!NOTE]
-> Once this package is [published to npm](https://www.stainless.com/docs/guides/publish), this will become: `npx -y wateen-open-api-v1.0-mcp`
 
 ### Via MCP Client
-
-[Build the project](#building) as mentioned above.
 
 There is a partial list of existing clients at [modelcontextprotocol.io](https://modelcontextprotocol.io/clients). If you already
 have a client, consult their documentation to install the MCP server.
@@ -39,12 +24,8 @@ For clients with a configuration JSON, it might look something like this:
 {
   "mcpServers": {
     "wateen_openapi_v1_0_api": {
-      "command": "node",
-      "args": [
-        "/path/to/local/wateen-open-api-v1.0-typescript/packages/mcp-server",
-        "--client=claude",
-        "--tools=dynamic"
-      ],
+      "command": "npx",
+      "args": ["-y", "wateen-open-api-v1.0-mcp", "--client=claude", "--tools=dynamic"],
       "env": {
         "WATEEN_OPENAPI_V1_0_API_KEY": "My API Key"
       }
