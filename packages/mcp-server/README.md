@@ -9,8 +9,8 @@ It is generated with [Stainless](https://www.stainless.com/).
 Because it's not published yet, clone the repo and build it:
 
 ```sh
-git clone git@github.com:stainless-sdks/wateen-open-api-v1.0-typescript.git
-cd wateen-open-api-v1.0-typescript
+git clone git@github.com:M0-AR/wateen-open-api-v1.0.git
+cd wateen-open-api-v1.0
 ./scripts/bootstrap
 ./scripts/build
 ```
@@ -41,7 +41,7 @@ For clients with a configuration JSON, it might look something like this:
     "wateen_openapi_v1_0_api": {
       "command": "node",
       "args": [
-        "/path/to/local/wateen-open-api-v1.0-typescript/packages/mcp-server",
+        "/path/to/local/wateen-open-api-v1.0/packages/mcp-server",
         "--client=claude",
         "--tools=dynamic"
       ],
