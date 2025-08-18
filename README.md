@@ -1,0 +1,1 @@
+# wateen-open-api-v1.0-typescript
