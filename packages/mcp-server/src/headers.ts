@@ -17,7 +17,7 @@ export const parseAuthHeaders = (req: IncomingMessage): Partial<ClientOptions> =
   }
 
   const apiKey =
-    req.headers['x-wateen-openapi-v1-0-api-key'] instanceof Array ?
+    Array.isArray(req.headers['x-wateen-openapi-v1-0-api-key']) ?
       req.headers['x-wateen-openapi-v1-0-api-key'][0]
     : req.headers['x-wateen-openapi-v1-0-api-key'];
   return { apiKey };
