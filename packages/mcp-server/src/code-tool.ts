@@ -1,10 +1,8 @@
 // File generated from our OpenAPI spec by Stainless. See CONTRIBUTING.md for details.
 
-import { type ClientOptions } from 'wateen-open-api-v1.0/client';
-
 import { dirname } from 'node:path';
 import { pathToFileURL } from 'node:url';
-import WateenOpenAPIV1_0 from 'wateen-open-api-v1.0';
+import WateenOpenAPIV1_0, { ClientOptions } from 'wateen-open-api-v1.0';
 import { Endpoint, ContentBlock, Metadata } from './tools/types';
 
 import { Tool } from '@modelcontextprotocol/sdk/types.js';
