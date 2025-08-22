@@ -1,6 +1,6 @@
 // File generated from our OpenAPI spec by Stainless. See CONTRIBUTING.md for details.
 
-import { type ClientOptions } from 'wateen-open-api-v1.0/client';
+import { ClientOptions } from 'wateen-open-api-v1.0';
 
 export type WorkerInput = {
   opts: ClientOptions;
