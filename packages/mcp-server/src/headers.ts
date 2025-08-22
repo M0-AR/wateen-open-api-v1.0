@@ -1,8 +1,7 @@
 // File generated from our OpenAPI spec by Stainless. See CONTRIBUTING.md for details.
 
-import { type ClientOptions } from 'wateen-open-api-v1.0/client';
-
 import { IncomingMessage } from 'node:http';
+import { ClientOptions } from 'wateen-open-api-v1.0';
 
 export const parseAuthHeaders = (req: IncomingMessage): Partial<ClientOptions> => {
   if (req.headers.authorization) {
