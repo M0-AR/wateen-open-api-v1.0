@@ -7,10 +7,9 @@
     "module": "commonjs",
     "moduleResolution": "node",
     "esModuleInterop": true,
-    "baseUrl": "./",
     "paths": {
-      "wateen-open-api-v1.0-mcp/*": ["src/*"],
-      "wateen-open-api-v1.0-mcp": ["src/index.ts"]
+      "wateen-open-api-v1.0-mcp/*": ["./src/*"],
+      "wateen-open-api-v1.0-mcp": ["./src/index.ts"]
     },
     "noEmit": true,
 
