@@ -34,7 +34,7 @@ export const newMcpServer = () =>
   new McpServer(
     {
       name: 'wateen_openapi_v1_0_api',
-      version: '1.0.0',
+      version: '1.1.0',
     },
     { capabilities: { tools: {}, logging: {} } },
   );
